@@ -22,6 +22,7 @@ fi
 if [ ! -d "${REPO_PATH}/.git" ]; then
   echo "Creating git repo"
   git --work-tree="${REPO_PATH}" --git-dir="${REPO_PATH}/.git" init
+  git --work-tree="${REPO_PATH}" --git-dir="${REPO_PATH}/.git" remote add origin git@github.com:kayatra/${PROJECT_NAME}.git
 fi
 
 echo "Creating base files"
